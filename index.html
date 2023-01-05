@@ -5,20 +5,24 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Matei's CV</title>
+    <title>Our-page</title>
     <link rel="stylesheet" href="style.css" />
 </head>
 <body>
 
     <header>
-    <h1>Matei Nicolae</h1>
-    <img src="selfie.png" height="190" width="140" />
-    <h2 id="job-title">Trainer @FastTrackIT</h2>
+    <h1 style="text-align: center;">Bodea Mihai-Cristian</h1>
+    <img style="float: left;" src="lectia 3/IMG_20210922_120710.jpg" height="220" width="270" />
+    <h2 style="text-align: justify; margin-left: 2px;" id="job-title">An ordinary man</h2>
     
-    <p style="color: red; text-align: right;">
-        <strong>Welcome</strong> to my site!
+    <p style="color: red;font-size:27px;">
+        <strong>This website</strong> is for us!
     </p>
-
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
     <ul id="top-menu-bar">
         <li><a href="#">HOME</a> </li>
         <li><a href="#">Skills</a></li>
@@ -53,6 +57,7 @@
                     placeholder="Full Name"
                     />
                 </div>
+                <img src="selfie.png" height="120" width="80" /><br>
                 <button type="submit">Subscribe</button>
             </section>
         </div>
@@ -63,7 +68,7 @@
             <ul>
                 <li class="favorite">HTML</li>
                 <li class="favorite">CSS</li>
-                <li>JS</li>
+                <li>JavaScript</li>
             </ul>
         </div>
         
@@ -76,14 +81,14 @@
                 </tr>
                 <tr>
                     <td>Romanian</td>
-                    <td>Native</td>
+                    <td>Native?</td>
                 </tr>
                 <tr>
                     <td>English</td>
                     <td>Proficient</td>
                 </tr>
                 <tr>
-                    <td>Chinese</td>
+                    <td>~Limbajul iubirii~</td>
                     <td>Beginner</td>
                 </tr>
             </table>
@@ -94,5 +99,25 @@
     <footer><a target="_blank" href="https://www.google.com">Google</a></footer>
 </div>
 </section>
+<script src="index2.js"></script>
+<script>   
+    console.info("page loaded");
+
+    var user = "Mihai";
+    console.info(user);
+    user = user + " Cristian";
+    console.info(user);
+    //crearea unui obiect = {proprietate:valoare}
+    var person = {
+        employed: true,
+        age: 29
+    }; 
+
+    var jobTitle = document.getElementById("job-title");
+
+    // in consola, daca vreau pot schimba proprietatea unui element, scriind, de ex:
+    // jobTitle.style.color = 'green'  
+    // si il schimba din albastru in verde!
+</script>
 </body>
 </html>
