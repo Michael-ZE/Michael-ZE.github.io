@@ -12,23 +12,28 @@ skillsEl.innerHTML = skillsHTML;
 
 var pageIds = ["home", "skills", "languages", "projects"];
 
-function hidePage(id){
-    hide(id);
-}
 
-function hideAllPages() {
-    pageIds.forEach(hidePage);                    
+// function hideAllPages() {
+    pageIds.forEach(function(id) {
+        hide(id);
+    });                    
 //    hide("home");
 //    hide("skills");
 //    hide("languages");
 //    hide("projects");
-} 
+//  sau (alta varianta):
+function hideAllPages() {
+    pageIds.forEach(function(pageId) {
+        hide(pageId);
+    });   
+}
 
 function show(id){
     document.getElementById(id).style.display="block";
 }
 
 function hide(id){
+    console.info("hide", id);
  document.getElementById(id).style.display="none";
 }
 
