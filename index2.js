@@ -53,8 +53,9 @@ function displayHome(){
     show("home");
 }    
 
+
 function displaySkills(){
-    //console.warn("trebuie sa afisam DOAR skills page");
+    //trebuie sa afisam DOAR skills page -varianta lunga
     document.getElementById("home").style.display = "none";
     document.getElementById("skills").style.display = "block";
     document.getElementById("languages").style.display = "none";
@@ -62,16 +63,20 @@ function displaySkills(){
 }
 
 function displayLanguages(){
-    document.getElementById("home").style.display = "none";
-    document.getElementById("skills").style.display = "none";
-    document.getElementById("languages").style.display = "block";
-    document.getElementById("projects").style.display = "none";
+    // o varianta mult mai scurta
+   displayPage("languages");
 }
 
 function displayProjects(){
-    document.getElementById("home").style.display = "none";
-    document.getElementById("skills").style.display = "none";
-    document.getElementById("languages").style.display = "none";
-    document.getElementById("projects").style.display = "block";
+   displayPage("projects");
 }
-displayHome();
+
+//function displayHome(){ hideAllPages(); show("home");}    
+
+function displayPage(id) {
+    hideAllPages();
+    show(id);
+}
+
+displayPage("home");
+//= displayHome();
