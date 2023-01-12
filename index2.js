@@ -10,11 +10,18 @@ for (var i=1; i<skills.length; i++) {
 
 skillsEl.innerHTML = skillsHTML;
 
+var pageIds = ["home", "skills", "languages", "projects"];
+
+function hidePage(id){
+    hide(id);
+}
+
 function hideAllPages() {
-    hide("home");
-    hide("skills");
-    hide("languages");
-    hide("projects");
+    pageIds.forEach(hidePage);                    
+//    hide("home");
+//    hide("skills");
+//    hide("languages");
+//    hide("projects");
 } 
 
 function show(id){
@@ -34,7 +41,7 @@ function hide(id){
     // in loc de "display = none" de 3 ori
     document.getElementById("skills").style.display = "none";
     document.getElementById("languages").style.display = "none";
-    document.getElementById("projects").style.display = "none";}
+    document.getElementById("projects").style.display = "none";
 
 function displayHome(){
     hideAllPages();
